@@ -47,7 +47,7 @@ function setup() {
    // }
  // }
  rect(100, 500,30, 30);
- image(img, 10, 10, 50, 50);
+ image(img, 100, 100, 500, 500);
 }
 
 function draw() {
