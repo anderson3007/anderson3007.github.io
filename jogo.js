@@ -1,6 +1,6 @@
 let img;
 function preload() {
-  img = loadImage('img/run_direito/Run__direito.png');
+  img = loadImage('img/run_direito/Run__000.png');
 }
 function setup() {
   background(50);
