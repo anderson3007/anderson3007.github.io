@@ -1,7 +1,4 @@
-let img;
-function preload() {
-  //im = loadImage('img/run_direito/Ru.png');
-}
+
 function setup() {
   createCanvas(1200, 552);
   background(50);
