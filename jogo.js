@@ -40,6 +40,7 @@ funcion preload(){
 
 function setup() {
   createCanvas(1200, 552);
+  image(img, 100, 100, 500, 500);
   //randomSeed(new Date().getTime());
   //for (let i = 0; i < map.length; i++) {
     //for (let j = 0; j < map[i].length; j++) {
@@ -47,7 +48,7 @@ function setup() {
    // }
  // }
  rect(100, 500,30, 30);
- image(img, 100, 100, 500, 500);
+ 
 }
 
 function draw() {
