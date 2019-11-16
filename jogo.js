@@ -31,11 +31,9 @@ var opcoes = [0,1];
 
 var tileSize=30;
 
-let img;
 
-funcion preload(){
-  img = loadImage('img/run_direito/Run__000.png');
-}
+
+
 
 
 function setup() {
@@ -47,7 +45,6 @@ function setup() {
    // }
  // }
  rect(100, 500,30, 30);
- image(img, 10, 10, 50, 50);
 }
 
 function draw() {
