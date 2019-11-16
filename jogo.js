@@ -1,6 +1,6 @@
 let img;
 function preload() {
-  img = loadImage('img/run_direito/Run__00.png');
+  img = loadImage('img/run_direito/Run_00.png');
 }
 function setup() {
   createCanvas(1200, 552);
