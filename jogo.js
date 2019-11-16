@@ -3,6 +3,7 @@ function preload() {
   img = loadImage('img/run_direito/Run__000.png');
 }
 function setup() {
+  createCanvas(1200, 552);
   background(50);
   // Top-left corner of the img is at (10, 10)
   // Width and height are 50 x 50
