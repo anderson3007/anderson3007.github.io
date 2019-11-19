@@ -43,6 +43,7 @@ function setup() {
 }
 
 function draw() {
+
   
   switch(telaAtiva) {
     case 0:
@@ -84,7 +85,7 @@ function menu() {
   strokeWeight(1);
   rect(x_menu, y_menu, 310, 65,10);
 }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 function jogar() {
 
    background(200);
@@ -98,86 +99,107 @@ function jogar() {
     }
   }
   
-   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {
-      x-=5;
-      
-   }
+  if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
+    if (colisaoBloco(x,y)) {
+      alert("perdeu");
+    } x-=5;   
+  }
    
-
-  if (keyIsDown(RIGHT_ARROW)&& !bateuNoMapa(x+5,y)  ){
-       x+=5;
-       
-   }
-
-  if (keyIsDown(UP_ARROW)&& !bateuNoMapa(x,y-5) ) {
-    y-=5;
+  if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ){ 
+    if(colisaoBloco(x,y)){
+      alert("perdeu");
+    } x+=5;   
   }
 
-  if (keyIsDown(DOWN_ARROW)&& !bateuNoMapa(x,y+5)){
-    y+=5;
+  if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
+    if(colisaoBloco(x,y)){
+      alert("perdeu");
+    } y-=5;
   }
 
-  if(bloco1<1150 && b1==0){
+  if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
+    if(colisaoBloco(x,y)){
+      alert("perdeu");
+    } y+=5;
+  }
+  if (colisaoBloco(x,y)) {
+    alert("perdeu");
+  }
+
+
+  if (bloco1<1150 && b1==0) {
     bloco1 = bloco1+5;
-  }else{
-    b1=1;
-    bloco1=bloco1-5
-    if(bloco1==30){
-      b1=0
+  } else{
+      b1=1;
+      bloco1=bloco1-5
+      if (bloco1==30) {
+        b1=0
+      }
     }
-  }
 
-  if(bloco2<1150 && b2==0){
+  if (bloco2<1150 && b2==0) {
     bloco2 = bloco2+5;
-  }else{
-    b2=1;
-    bloco2=bloco2-5
-    if(bloco2==30){
-      b2=0
+  } else{
+      b2=1;
+      bloco2=bloco2-5
+      if (bloco2==30) {
+        b2=0
+      }
     }
-  }
 
-    if(bloco3<1150 && b3==0){
+  if (bloco3<1150 && b3==0) {
     bloco3 = bloco3+5;
-  }else{
-    b3=1;
-    bloco3=bloco3-5
-    if(bloco3==30){
-      b3=0
+  } else{
+      b3=1;
+      bloco3=bloco3-5
+      if (bloco3==30) {
+        b3=0
+      }
     }
-  }
+
+
   fill(0, 0, 204);
   rect(x, y, 25, 25);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
   rect(bloco3, 270,20, 30);
 
-
  
-function bateuNoMapa(a, b) {
-        let bateu=false; 
-        for (var i = 0; i < map.length; i++) {
-            for (var j = 0; j < map[i].length; j++) {
-                 if(map[i][j]==1 && colisao(a,b,j * tileSize,i * tileSize)){
-                     bateu=true;
-                     return bateu;
-                 }
-            }
+  function bateuNoMapa(a, b) {
+    let bateu=false; 
+      for (var i = 0; i < map.length; i++) {
+        for (var j = 0; j < map[i].length; j++) {
+          if (map[i][j]==1 && colisaoMapa(a,b,j * tileSize,i * tileSize)){
+            bateu=true;
+            return bateu;
+          }
         }
+      }
       return bateu;
-    }
-                    
-   function colisao(x1,y1,x2,y2) {
-        if(x1 > x2 + 25)
-          return false;
-        if(y1 > y2 + 25)
-          return false;
-        if(x1 + 25 < x2)
-          return false;
-        if(y1 + 25 < y2)
-          return false;
-        return true;
+  }
+     
+
+function colisaoMapa(x1,y1,x2,y2) {
+  if(x1 > x2 + 25)
+    return false;
+  if(y1 > y2 + 25)
+    return false;
+  if(x1 + 25 < x2)
+    return false;
+  if(y1 + 25 < y2)
+    return false;
+  return true;
   
+ }
+
+ function colisaoBloco(a,b) {
+    if ((bloco1+20==a || bloco1-20==a) && 390==b )
+      return true;
+    if ((bloco2+20==a || bloco2-20==a) && 330==b )
+      return true;
+    if ((bloco3+20==a || bloco3-20==a)&& 270==b )
+      return true;
+    return false;
  }
 }
 
@@ -216,35 +238,34 @@ function sair() {
 function keyPressed() {
   console.log(keyCode);
   
-  if(keyCode === ESCAPE)
-      telaAtiva=0;
+  if (keyCode === ESCAPE)
+    telaAtiva=0;
   
   if (keyCode === ENTER) 
-      telaAtiva=opcao;
+    telaAtiva=opcao;
      
   if (keyCode === DOWN_ARROW) {
-    if(y_menu<230) {
-       y_menu+=70;
-       if(opcao==1)
-           opcao=2;
-       else 
-          if(opcao==2)
-             opcao=3; 
-    }
-    
+    if (y_menu<230) {
+      y_menu+=70;
+      if (opcao==1)
+        opcao=2;
+      else 
+        if (opcao==2)
+          opcao=3; 
+    } 
   } else if (keyCode === UP_ARROW) {
-    if(y_menu>95) {
+    if (y_menu>95) {
        y_menu-=70;
-       if(opcao==2) {
+       if (opcao==2) {
          opcao=1;
        } else { 
-         if(opcao==3) {
+          if (opcao==3) {
            opcao=2;
+          }
          }
-       }
     }
    
-  }
+    }
   console.log("opcao: "+opcao);
   console.log("telaAtiva: "+telaAtiva);
 }
