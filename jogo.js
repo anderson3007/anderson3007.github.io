@@ -72,7 +72,7 @@ function draw() {
 function menu() {
 
   background('#a1d391');
-  image(img, 480, 300, 400, 200)
+  image(img, 480, 300, 200, 200)
   
    
   fill('#ffc000');
