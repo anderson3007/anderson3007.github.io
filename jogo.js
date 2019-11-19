@@ -73,7 +73,7 @@ function menu() {
 
   background('#a1d391');
   image(img, 560, 400, 200, 150);
-  image(boneco, x, y, 30,30);
+  
    
   fill('#ffc000');
   stroke('white');
@@ -207,9 +207,8 @@ function jogar() {
       }
     }
 
-
+  image(boneco, x, y, 30,30);
   fill(0, 0, 204);
-  rect(x, y, 25, 25);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
   rect(bloco3, 270,20, 30);
