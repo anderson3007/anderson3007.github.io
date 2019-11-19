@@ -68,7 +68,7 @@ function draw() {
 function menu() {
 
   background('#a1d391');
-  image(img, 100, 400, 50, 50);
+  image(img, 560, 400, 200, 150);
    
   fill('#ffc000');
   stroke('white');
