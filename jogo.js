@@ -36,11 +36,13 @@ var opcoes = [0,1];
 var tileSize=30;
 var opcao = 1 
 var telaAtiva = 0;
-
+let img;
+function preload() {
+  img = loadImage('img/livro.png');
+  }
 function setup() {
   createCanvas(1200, 540);
-  rect(100, 100,30, 30);
-  image(img, 100, 400, 50, 50);
+  
 }
 
 function draw() {
@@ -66,10 +68,7 @@ function draw() {
 function menu() {
 
   background('#a1d391');
-  let img;
-  function preload() {
-  img = loadImage('img/livro.png');
-  }
+  image(img, 100, 400, 50, 50);
    
   fill('#ffc000');
   stroke('white');
