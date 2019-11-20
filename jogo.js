@@ -255,7 +255,7 @@ function colisaoMapa(x1,y1,x2,y2) {
 
 function regras() {
    
-  background('#7FDBFF');
+  background('#a1d391');
    
   fill('white');
   stroke('black');
@@ -264,7 +264,7 @@ function regras() {
   textSize(28);
   fill('black');
   
-  text('Aqui vao as regras', 40, 55);
+  text('regras ainda não importadas. pensando em carregar vídeo de gamaplay.', 40, 55);
 }
 
 
