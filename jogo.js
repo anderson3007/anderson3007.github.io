@@ -12,7 +12,7 @@ function setup() {
 
 
 function draw() {
-  for(var j=0; j<9; j++){
+  for(var j=0; j<9; j+=0.1){
     if(parseInt(j)==j){
    image(img[j], 110, 110,50,50);
   }
