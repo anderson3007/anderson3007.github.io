@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(1200, 540);
-  for(var j=0; j<9; j+=0.1){
+  for(var j=0; j<9; j =j+0.1){
    image(img[j], 110, 110,50,50);
   }
 }
