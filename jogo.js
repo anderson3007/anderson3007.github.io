@@ -1,4 +1,4 @@
-let andarD= [ ]
+let andarD
 let andarE=[ ]
 let morrerD=[ ]
 let morrerE=[ ]
@@ -6,9 +6,9 @@ let pararD=[ ]
 let pararE=[ ]
 
 function preload {
-    for (var i=0;i<=9;i++){
-        andarD[i]= loadImage('img/run_direito/Run__00'+i+'.png');
-    }
+   
+        andarD = loadImage('img/run_direito/Run__000.png');
+   
 
 }
 
@@ -21,9 +21,9 @@ function draw() {
   
   background(200);
   fill(250,250,250);
-  for(var j=0; j<=9; j++) {
-      image(andarD[j],100, 100, 30,30);
-    }
+  
+      image(andarD,100, 100, 30,30);
+    
   
 }
 
