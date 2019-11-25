@@ -1,12 +1,16 @@
-let img;
+let img=[];
 function preload() {
-  img = loadImage('img/run_direito/Run__000.png');
+  for(var i=0; i<9; i++){
+  img[i] = loadImage('img/run_direito/Run__00'+i+'.png');
+  }
 }
 
 
 function setup() {
   createCanvas(1200, 540);
-   image(img, 110, 110,50,50);
+  for(var j=0; j<9; j++){
+   image(img[j], 110, 110,50,50);
+  }
 }
 
 
