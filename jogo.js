@@ -13,7 +13,9 @@ function setup() {
 
 function draw() {
   for(var j=0; j<9; j++){
+    if((parseInt(j)==j){
    image(img[j], 110, 110,50,50);
+  }
   }
 }
 
