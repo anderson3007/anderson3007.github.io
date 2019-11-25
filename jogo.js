@@ -1,14 +1,16 @@
+let img;
+function preload() {
+  img = loadImage('img/run_direito/Run__000.png');
+}
+
 
 function setup() {
   createCanvas(1200, 540);
+   image(img, 110, 110);
 }
 
 
 function draw() {
-  
-  background(200);
-  fill(250,250,250);
-  
   
 }
 
