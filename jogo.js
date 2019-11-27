@@ -25,8 +25,5 @@ function draw() {
   } else {
     poseTime++;
   }
-  if(carregando > 9){
-    carregando = 0;
-  }
   
 }
