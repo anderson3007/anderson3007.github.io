@@ -1,6 +1,7 @@
 
 let vetor = [];
 var carregando=0;
+var poseTime=0;
 let boneco;
 function preload() {
   for(var i=0; i<9; i++){
@@ -17,7 +18,13 @@ function setup() {
 function draw() {
   boneco = vetor[carregando%9];
   image(boneco, 100, 100, 50,50);
-  carregando++;
+  
+  if(poseTime==5) {
+     carregando++;
+     poseTime=0;
+  } else {
+    poseTime++;
+  }
   if(carregando > 9){
     carregando = 0;
   }
