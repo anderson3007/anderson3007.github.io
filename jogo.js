@@ -16,6 +16,6 @@ function setup() {
 function draw() {
   background('#a1d391');
   for(j=0; j<9; j++){
-  image(vetor[j], 100, 100, 50,50);
+  image(vetor[j%9], 100, 100, 50,50);
   }
 }
