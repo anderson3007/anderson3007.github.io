@@ -1,5 +1,5 @@
 
-let vetor = [];
+var vetor = [];
 var carregando=0;
 var poseTime=0;
 function preload() {
