@@ -15,9 +15,9 @@ function setup() {
 
 function draw() {
   boneco = vetor[carregando];
-  
-  if(carregando < 9){
+  carregando++;
+  if(carregando > 9){
     carregando = 0;
   }
-  carregando++;
+  
 }
