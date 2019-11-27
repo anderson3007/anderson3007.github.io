@@ -8,13 +8,13 @@ function preload() {
   }
 }
 function setup() {
-  frameRate(30);
+  
   createCanvas(1200, 540);
-  background('#a1d391');
   
 }
 
 function draw() {
+  background('#a1d391');
 
   image(vetor[carregando%9], 100, 100, 50,50);
   
