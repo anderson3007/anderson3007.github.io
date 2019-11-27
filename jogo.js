@@ -1,12 +1,12 @@
 
-//let vetor =[];
-//var carregando=0;
-//let boneco;
-/*function preload() {
+let vetor = [];
+var carregando=0;
+let boneco;
+function preload() {
   for(var i=0; i<9; i++){
   vetor[i] = loadImage('img/run_direito/Run__00'+i+'.png');
   }
-}*/
+}
 function setup() {
   createCanvas(1200, 540);
   background('#a1d391');
@@ -14,10 +14,10 @@ function setup() {
 }
 
 function draw() {
-  /*boneco = vetor[carregando];
+  boneco = vetor[carregando];
   
-  if(carregando ==8){
+  if(carregando < 9){
     carregando = 0;
   }
-  carregando++;*/
+  carregando++;
 }
