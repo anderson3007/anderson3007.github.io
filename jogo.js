@@ -15,14 +15,7 @@ function setup() {
 
 function draw() {
   background('#a1d391');
-
-  image(vetor[carregando%9], 100, 100, 50,50);
-  
-  if(poseTime==5) {
-     carregando++;
-     poseTime=0;
-  } else {
-    poseTime++;
+  for(j=0; j<9; j++){
+  image(vetor[j], 100, 100, 50,50);
   }
-  
 }
