@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
 
-  image(vetor[carregando%9];, 100, 100, 50,50);
+  image(vetor[carregando%9], 100, 100, 50,50);
   
   if(poseTime==5) {
      carregando++;
