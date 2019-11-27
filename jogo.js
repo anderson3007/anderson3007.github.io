@@ -1,7 +1,7 @@
 
-let vetor =[];
-var carregando=0;
-let boneco;
+//let vetor =[];
+//var carregando=0;
+//let boneco;
 /*function preload() {
   for(var i=0; i<9; i++){
   vetor[i] = loadImage('img/run_direito/Run__00'+i+'.png');
@@ -9,6 +9,7 @@ let boneco;
 }*/
 function setup() {
   createCanvas(1200, 540);
+  background('#a1d391');
   
 }
 
