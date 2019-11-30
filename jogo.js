@@ -67,7 +67,7 @@ function jogar() {
         
     } 
     animacao = 2
-    background('#A1D391');
+   
     x-=5;   
   }
    
@@ -86,7 +86,7 @@ function jogar() {
         }
     } 
     animacao = 1
-    background('#A1D391');
+    
     x+=5;   
   }
 
@@ -106,7 +106,7 @@ function jogar() {
     } 
     
     y-=5;
-    background('#A1D391');
+    
   }
 
 
@@ -125,7 +125,7 @@ function jogar() {
           y = 470;
         }
     } 
-    background('#A1D391');
+    
     y+=5;
   }
   
