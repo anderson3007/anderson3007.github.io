@@ -39,9 +39,11 @@ function animaUse() {
             stroke('white');
             strokeWeight(1);
             rect(450, 100, 900, 500, 10);
+            alert("d")
             for (i=0; i<=8; i++) {
               image(morrerD[i%8], 450, 100, 70,70);           
             }
+            alert("d")
           } else {
               image(pararD[velocidade%8], x, y, 30,30);    
             }
@@ -55,4 +57,5 @@ function animaUse() {
       tempo++;
     }
     animacao=0;
+    return true;
 }
