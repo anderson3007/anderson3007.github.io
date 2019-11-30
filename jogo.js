@@ -96,7 +96,7 @@ function jogar() {
           y = 470;
         }
     } 
-    animacao = 2
+    
     y-=5;
   }
 
@@ -113,7 +113,7 @@ function jogar() {
           y = 470;
         }
     } 
-    animacao = 1
+    
     y+=5;
   }
   
@@ -163,7 +163,7 @@ function jogar() {
       }
     }
 
-  animaUse(animacao);
+  animaUse();
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
