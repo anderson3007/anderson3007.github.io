@@ -11,7 +11,7 @@ var
 
 function preload() {
   livro = loadImage('img/livro.png');
-  for (var i=0;i<=9;i++){
+  for (var i=0;i<=8;i++){
     andarD [i] = loadImage('img/run_direito/Run__00'+i+'.png');
     andarE [i] = loadImage('img/run_esquerdo/Runv__00'+i+'.png');
     morrerD[i] = loadImage('img/dead_direito/Dead__00'+i+'.png');
