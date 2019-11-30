@@ -36,7 +36,7 @@ function animaUse() {
           if (animacao == 3) {
             rect(450, 100, 900, 500, 10);
             for (i=0; i<=8; i++) {
-              image(morrerD[i%8], x, y, 30,30);           
+              image(morrerD[i%8], 450, 100, 70,70);           
             }
           } else {
               image(pararD[velocidade%8], x, y, 30,30);    
