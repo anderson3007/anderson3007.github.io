@@ -34,19 +34,16 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-              image(morrerD[velocidade%8], x, y, 30,30);           
+            rect(450, 100, 900, 500, 10);
+            for (i=0; i<=8; i++) {
+              image(morrerD[i%8], x, y, 30,30);           
+            }
           } else {
-
-              if (animacao == 4){
-                  image(morrerE[velocidade%8], x, y, 30,30);           
-              } else {
-                  
-                  image(pararD[velocidade%8], x, y, 30,30);
-                  
-                }  
+              image(pararD[velocidade%8], x, y, 30,30);    
             }
         }  
     }
+
   if (tempo>3) {
     velocidade++;
     tempo=0;
