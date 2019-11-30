@@ -163,7 +163,7 @@ function jogar() {
       }
     }
 
-  animaUse();
+  animaUse(animacao);
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
@@ -208,3 +208,8 @@ function jogar() {
  }
 }
 animacao=0;
+
+
+
+
+
