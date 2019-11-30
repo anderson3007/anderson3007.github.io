@@ -9,7 +9,7 @@ var
   tempo = 0,
   animacao = 0;
 
-function preload {
+function preload() {
   livro = loadImage('img/livro.png');
   for (var i=0;i<=9;i++){
     andarD [i] = loadImage('img/run_direito/Run__00'+i+'.png');
