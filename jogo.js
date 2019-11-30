@@ -55,6 +55,8 @@ function jogar() {
   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
     if (colisaoBloco(x,y)) {
       tentativas--;
+      animacao = 3;
+      animaUse();
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -72,6 +74,8 @@ function jogar() {
   if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
     if (colisaoBloco(x,y)) {
       tentativas--;
+      animacao = 3;
+      animaUse();
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -88,6 +92,8 @@ function jogar() {
   if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
     if (colisaoBloco(x,y)) {
       tentativas--;
+      animacao = 3;
+      animaUse();
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -104,10 +110,13 @@ function jogar() {
   if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
     if (colisaoBloco(x,y)){
       tentativas--;
+      animacao = 3;
+      animaUse();
       if (tentativas==0) {
         alert("vc é muito lerdo. perdeu otário!")
         voltarMenu();
       } else{
+
           alert("restão: "+tentativas);
           x = 600;
           y = 470;
@@ -120,6 +129,8 @@ function jogar() {
 
   if (colisaoBloco(x,y)) {
     tentativas--;
+    animacao = 3;
+    animaUse();
     if (tentativas==0) {
       alert("vc é muito lerdo. perdeu otário!")
       voltarMenu();
@@ -207,7 +218,7 @@ function jogar() {
     return false;
  }
 }
-animacao=0;
+
 
 
 
