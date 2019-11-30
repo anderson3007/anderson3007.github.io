@@ -53,5 +53,5 @@ function animaUse(animacao) {
   } else {
       tempo++;
     }
-    
+    animacao=0;
 }
