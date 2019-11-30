@@ -2,9 +2,7 @@ var
   andarD = [ ],
   andarE = [ ],
   morrerD =[ ],
-  morrerE =[ ],
   pararD = [ ],
-  pararE = [ ],
   livro,
   tempo = 0,
   velocidade=0,
@@ -16,7 +14,6 @@ function preload() {
     andarD [i] = loadImage('img/run_direito/Run__00'+i+'.png');
     andarE [i] = loadImage('img/run_esquerdo/Runv__00'+i+'.png');
     morrerD[i] = loadImage('img/dead_direito/Dead__00'+i+'.png');
-    morrerE[i] = loadImage('img/dead_esquerdo/Deadv__00'+i+'.png');
     pararD [i] = loadImage('img/idle_direito/Idle__00'+i+'.png');
     
   }
@@ -39,11 +36,12 @@ function animaUse() {
             stroke('white');
             strokeWeight(1);
             rect(450, 100, 900, 500, 10);
-            alert("d")
+
             for (i=0; i<=8; i++) {
+              alert("dsd")
               image(morrerD[i%8], 450, 100, 70,70);           
             }
-            alert("d")
+            
           } else {
               image(pararD[velocidade%8], x, y, 30,30);    
             }
