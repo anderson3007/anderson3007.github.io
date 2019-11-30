@@ -31,14 +31,15 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-            background('#A1D391');
-            fill('#ffc000');
-            stroke('white');
-            strokeWeight(1);
-            rect(450, 100, 900, 500, 10);
+            
+            
 
             for (i=0; i<=8; i++) {
-              alert("dsd")
+              background('#A1D391');
+              fill('#ffc000');
+              stroke('white');
+              strokeWeight(1);
+              rect(450, 100, 900, 500, 10);
               image(morrerD[i%8], 450, 100, 70,70);           
             }
             
