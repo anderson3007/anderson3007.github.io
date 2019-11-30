@@ -7,6 +7,7 @@ var
   pararE = [ ],
   livro,
   tempo = 0,
+  velocidade=0,
   animacao = 0;
 
 function preload() {
@@ -22,29 +23,35 @@ function preload() {
 }
 
 
-function animaUse() {
+function animaUse(animacao) {
   
   if (animacao == 1) {
-      image(andarD[tempo%9], x, y, 30,30); 
+      image(andarD[velocidade%9], x, y, 30,30); 
   } else {
       
       if (animacao == 2) {
-          image(andarE[tempo%9], x, y, 30,30);
+          image(andarE[velocidade%9], x, y, 30,30);
       } else {
 
           if (animacao == 3) {
-              image(morrerD[tempo%9], x, y, 30,30);           
+              image(morrerD[velocidade%9], x, y, 30,30);           
           } else {
 
               if (animacao == 4){
-                  image(morrerE[tempo%9], x, y, 30,30);           
+                  image(morrerE[velocidade%9], x, y, 30,30);           
               } else {
                   
-                  image(pararD[tempo%9], x, y, 30,30);
+                  image(pararD[velocidade%9], x, y, 30,30);
                   
                 }  
             }
         }  
     }
-  tempo++;
+  if (tempo>5) {
+    velocidade++;
+    tempo=0;
+  } else {
+      tempo++;
+    }
+    
 }
