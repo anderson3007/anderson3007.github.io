@@ -37,7 +37,7 @@ function animaUse() {
               stroke('white');
               strokeWeight(1);
               rect(350, 100, 500, 300, 10);
-              image(morrerD[m%9], 450, 100, 70,70);
+              image(morrerD[m%9], 500, 200, 90,90);
              if(t>4){
                 m++;
                 t=0;
