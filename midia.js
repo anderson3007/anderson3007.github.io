@@ -50,6 +50,7 @@ function animaUse() {
              }
           }
               else {
+              jogo();
               image(pararD[velocidade%9], x, y, 30,30);    
             }
         }  
@@ -62,3 +63,5 @@ function animaUse() {
       tempo++;
     }
 }
+
+animacao = 0;
