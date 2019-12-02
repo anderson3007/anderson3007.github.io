@@ -24,18 +24,12 @@ function preload() {
 function animaUse() {
   
   if (animacao == 1) {
-                fill('#E4E7E7');
-                stroke('white');
-                strokeWeight(1);
-                rect(350, 100, 500, 300, 10); 
+                
                 image(andarD[velocidade%8], x, y, 30,30); 
   } else {
       
       if (animacao == 2) {
-                 fill('#E4E7E7');
-                stroke('white');
-                strokeWeight(1);
-                rect(350, 100, 500, 300, 10); 
+          
                 image(andarE[velocidade%8], x, y, 30,30);
       } else {
 
@@ -50,7 +44,7 @@ function animaUse() {
              }
           }
               else {
-              jogo();
+            
               image(pararD[velocidade%9], x, y, 30,30);    
             }
         }  
