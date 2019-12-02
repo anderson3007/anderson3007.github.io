@@ -39,7 +39,7 @@ function animaUse() {
               fill('#ffc000');
               stroke('white');
               strokeWeight(1);
-              rect(450, 100, 900, 500, 10);
+              rect(450, 100, 500, 300, 10);
               image(morrerD[i%8], 450, 100, 70,70);           
             }
             
