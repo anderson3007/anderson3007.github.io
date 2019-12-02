@@ -37,7 +37,7 @@ function animaUse() {
               stroke('white');
               strokeWeight(1);
               rect(350, 100, 500, 300, 10);
-              image(morrerD[i%9], 450, 100, 70,70);
+              image(morrerD[m%9], 450, 100, 70,70);
              if(t>4){
                 m++;
                 t=0;
@@ -46,7 +46,7 @@ function animaUse() {
               }
               
           } else {
-              image(pararD[m%9], x, y, 30,30);    
+              image(pararD[velocidade%9], x, y, 30,30);    
             }
         }  
     }
