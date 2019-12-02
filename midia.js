@@ -35,11 +35,11 @@ function animaUse() {
             
 
             for (i=0; i<=8; i++) {
-              background('#A1D391');
+              background('#E4E7E7');
               fill('#ffc000');
               stroke('white');
               strokeWeight(1);
-              rect(450, 100, 500, 300, 10);
+              rect(350, 100, 500, 300, 10);
               image(morrerD[i%8], 450, 100, 70,70);           
             }
             
