@@ -32,18 +32,19 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-             
-              fill('#E4E7E7');
-              stroke('white');
-              strokeWeight(1);
-              rect(350, 100, 500, 300, 10);
-              image(morrerD[m], 600, 150, 90,90);
-             if(t>4){
-                m++;
-                t=0;
-              } else{
-                t++
-              }
+            for(var i=0;i<8; i++){
+                fill('#E4E7E7');
+                stroke('white');
+                strokeWeight(1);
+                rect(350, 100, 500, 300, 10); 
+                image(morrerD[m%9], 480, 200, 90,90);
+                if(t>3){
+                    i--;
+                    m++;
+                }else{
+                  t++
+                }
+            }
               
           } else {
               image(pararD[velocidade%9], x, y, 30,30);    
