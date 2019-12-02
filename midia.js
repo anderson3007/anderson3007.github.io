@@ -38,7 +38,7 @@ function animaUse() {
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
                 image(morrerD[i], 480, 200, 90,90);
-                for(var h=0; h<100; h++){
+                for(var h=0; h<1000; h++){
                 }
              }
           }
