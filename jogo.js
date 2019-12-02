@@ -138,7 +138,7 @@ function jogar() {
       alert("vc é muito lerdo. perdeu otário!")
       voltarMenu();
     } else{
-        alert("restão: "+tentativas);
+       
         x = 600;
         y = 470;
       }    
