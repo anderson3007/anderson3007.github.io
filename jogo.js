@@ -134,7 +134,10 @@ function jogar() {
   if (colisaoBloco(x,y)) {
     tentativas--;
     animacao = 3;
+    
     animaUse();
+    
+    alert("restão: "+tentativas);
     if (tentativas==0) {
       alert("vc é muito lerdo. perdeu otário!")
       voltarMenu();
@@ -222,7 +225,6 @@ function jogar() {
     return false;
  }
 }
-animacao = 0;
 
 
 
