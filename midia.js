@@ -7,6 +7,7 @@ var
   tempo = 0,
   velocidade=0,
   animacao = 0;
+var m=0,t=0;
 
 function preload() {
   livro = loadImage('img/livro.png');
@@ -31,20 +32,21 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-            
-            
-
-            for (i=0; i<=8; i++) {
-              background('#E4E7E7');
-              fill('#ffc000');
+             
+              fill('#E4E7E7');
               stroke('white');
               strokeWeight(1);
               rect(350, 100, 500, 300, 10);
-              image(morrerD[i%8], 450, 100, 70,70);           
-            }
-            
+              image(morrerD[i%9], 450, 100, 70,70);
+             if(t>4){
+                m++;
+                t=0;
+              } else{
+                t++
+              }
+              }
           } else {
-              image(pararD[velocidade%8], x, y, 30,30);    
+              image(pararD[m%9], x, y, 30,30);    
             }
         }  
     }
