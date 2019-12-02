@@ -106,7 +106,7 @@ function animaUse() {
                 }
               }
                 else {
-                  image(pararD[m%9], x, y, 30,30);    
+                  image(pararD[velocidade%9], x, y, 30,30);    
                 }
         }  
     }
