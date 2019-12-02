@@ -68,7 +68,7 @@ function jogar() {
     } 
     animacao = 2
    
-    x-=5;   
+    x-=3;   
   }
    
 
@@ -87,7 +87,7 @@ function jogar() {
     } 
     animacao = 1
     
-    x+=5;   
+    x+=3;   
   }
 
 
