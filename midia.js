@@ -24,11 +24,19 @@ function preload() {
 function animaUse() {
   
   if (animacao == 1) {
-      image(andarD[velocidade%8], x, y, 30,30); 
+                fill('#E4E7E7');
+                stroke('white');
+                strokeWeight(1);
+                rect(350, 100, 500, 300, 10); 
+                image(andarD[velocidade%8], x, y, 30,30); 
   } else {
       
       if (animacao == 2) {
-          image(andarE[velocidade%8], x, y, 30,30);
+                 fill('#E4E7E7');
+                stroke('white');
+                strokeWeight(1);
+                rect(350, 100, 500, 300, 10); 
+                image(andarE[velocidade%8], x, y, 30,30);
       } else {
 
           if (animacao == 3) {
@@ -37,7 +45,7 @@ function animaUse() {
                 stroke('white');
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
-                image(morrerD[i], 480, 200, 90,90);
+                //image(morrerD[i], 480, 200, 90,90);
                
              }
           }
