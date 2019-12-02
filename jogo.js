@@ -221,6 +221,7 @@ function jogar() {
     return false;
  }
 }
+animacao = 0;
 
 
 
