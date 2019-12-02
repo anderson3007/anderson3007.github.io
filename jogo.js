@@ -57,8 +57,7 @@ function jogar() {
       tentativas--;
       animacao = 3;
       animaUse();
-      for(var h=0; h<10000; h++){
-      }
+      
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -79,8 +78,6 @@ function jogar() {
       tentativas--;
       animacao = 3;
       animaUse();
-      for(var h=0; h<10000; h++){
-      }
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -100,8 +97,6 @@ function jogar() {
       tentativas--;
       animacao = 3;
       animaUse();
-      for(var h=0; h<10000; h++){
-      }
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -121,8 +116,6 @@ function jogar() {
       tentativas--;
       animacao = 3;
       animaUse();
-      for(var h=0; h<10000; h++){
-      }
       if (tentativas==0) {
         alert("vc é muito lerdo. perdeu otário!")
         voltarMenu();
@@ -142,8 +135,6 @@ function jogar() {
     tentativas--;
     animacao = 3;
     animaUse();
-    for(var h=0; h<10000; h++){
-      }
     if (tentativas==0) {
       alert("vc é muito lerdo. perdeu otário!")
       voltarMenu();
