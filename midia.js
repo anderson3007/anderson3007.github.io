@@ -39,9 +39,8 @@ function animaUse() {
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
                 image(morrerD[velocidade%9], 500, 200, 90,90);
-               
-            
-              
+                alert("velocidade  "+velocidade+"   tempo:  "+tempo)
+
           } else {
               image(pararD[velocidade%9], x, y, 30,30);    
             }
@@ -56,3 +55,9 @@ function animaUse() {
     }
     m++;
 }
+
+function fase01() {
+
+}
+
+
