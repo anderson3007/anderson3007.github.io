@@ -215,13 +215,15 @@ function jogar() {
       }
     }
   }
+
+  if(voltar== 1){
+    alert("vc é muito lerdo. perdeu otário!");
+    voltar = 0;
+    voltarMenu();
+  }
+
 }
 
-if(voltar== 1){
-  alert("vc é muito lerdo. perdeu otário!");
-  voltar = 0;
-  voltarMenu();
-}
 
 
 
