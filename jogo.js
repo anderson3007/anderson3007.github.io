@@ -43,7 +43,7 @@ function jogar() {
   
   cenario();
   
-   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-3,y)) {    
+   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-2,y)) {    
         if (colisaoBloco(x,y)) {
               tentativas--;
               animacao = 3;
@@ -56,9 +56,9 @@ function jogar() {
                 }
         } 
         animacao = 2
-        x-=3;   
+        x-=2;   
   } else{
-      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+3,y) ) { 
+      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+2,y) ) { 
         if (colisaoBloco(x,y)) {
           tentativas--;
           animacao = 3;
@@ -72,7 +72,7 @@ function jogar() {
             }
         } 
         animacao = 1
-        x+=3;   
+        x+=2;   
       } else{
             if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
                   if (colisaoBloco(x,y)) {
@@ -190,7 +190,7 @@ function jogar() {
    }
 
  function colisaoBloco(a,b) {
-    if ((bloco1+20==a || bloco1-20==a) && (b>385 && b<395) )
+    if ((bloco1+20==a  || bloco1-20==a) && (b>385 && b<395) )
       return true;
     if ((bloco2+20==a || bloco2-20==a) && (b>325 && b<335) )
       return true;
