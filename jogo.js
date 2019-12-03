@@ -34,12 +34,12 @@ var bloco1=50,
     b2=0,
     b3=0;
 var tentativas=3;
+var testevidas =3;
 var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
-var testeVida =3;
-var conteteste = 3;
-var figura =50;
+var fase = 1;
+
 
 
 function jogar() {
@@ -158,15 +158,14 @@ function jogar() {
         b3=0
       }
     }
-while(conteteste>tentativas){
-  figura +=5;
-  rect(figura, 390,20, 30);
-  if (figura >=600) {
-    conteteste =tentativas;
-    alert("saiu");
+  if(testevidas>tentativas){
+    alert(perdeu);
+    testevidas = tentativas;
   }
-}
 
+  if(fase == 1){
+    fase1();
+  }  
   animaUse();
   animacao = 0;
   fill(0, 0, 204);
@@ -228,9 +227,9 @@ while(conteteste>tentativas){
     stroke('white');
     strokeWeight(1);
     rect(1000, 550, 100, 40, 10);
-    textSize(10);
+    textSize(30);
     fill('white');
-    text('tentativas:'+tentativas, 1000, 555);
+    text('tentativas:'+tentativas, 1000, 560);
   }
 
   if(voltar== 1){ 
