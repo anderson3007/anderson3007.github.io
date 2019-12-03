@@ -39,7 +39,6 @@ var tileSize=30;
 var voltar = 0;
 var testeVida =3;
 var conteteste = 0;
-var figura =50;
 
 
 function jogar() {
@@ -159,21 +158,9 @@ function jogar() {
       }
     }
 
-    /*while(testeVida>tentativas){
-      background('#A1D391');
-      figura +=5;
-      rect(figura,390,20, 30);
-      if(figura >=600){
-        testeVida = tentativas;
-        figura = 0;
-      }
-
-
-    }*/
-    animaUse();
-    animacao = 0;
   
-  
+  animaUse();
+  animacao = 0;
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
