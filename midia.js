@@ -32,8 +32,6 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-            
-                cenario();
                 fill('#E4E7E7');
                 stroke('white');
                 strokeWeight(1);
