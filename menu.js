@@ -5,7 +5,7 @@ var x_menu = 445,
 	  telaAtiva = 0;
 
 function setup() {
-  createCanvas(1200, 540);
+  createCanvas(1200, 600);
 }
 
 
@@ -56,7 +56,7 @@ function menu() {
 
 
 function voltarMenu() {
-  alert("vc é muito lerdo. perdeu otário!");
+  
   tentativas=3;
   x=600;
   y=470;
@@ -99,7 +99,7 @@ function keyPressed() {
   console.log(keyCode);
   
   if (keyCode === ESCAPE)
-    voltarMenu();
+    telaAtiva = 0;
   if (keyCode === ENTER) 
     telaAtiva=opcao;
      
