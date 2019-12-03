@@ -208,7 +208,6 @@ function jogar() {
       }
     }
   }
-  animacao = 0;
   if(voltar== 1){ 
     voltar = 0;
     voltarMenu();
