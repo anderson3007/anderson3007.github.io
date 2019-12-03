@@ -46,7 +46,6 @@ function jogar() {
       tentativas--;
       animacao = 3;
       animaUse();
-      break;
       if (tentativas==0) {
         voltarMenu();
       } else {
