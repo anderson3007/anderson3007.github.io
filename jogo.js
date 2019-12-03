@@ -37,28 +37,29 @@ var tentativas=3;
 var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
+var testeVida =3;
+var conteteste = 0;
 
 
 function jogar() {
   
   cenario();
   
-   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-2,y)) {    
+   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-3,y)) {    
         if (colisaoBloco(x,y)) {
               tentativas--;
               animacao = 3;
               if (tentativas==0) {
                     voltar = 1;
               } else {
-                      alert("restam: "+tentativas+"tentativas");
                       x = 600;
                       y = 470;
                 }
         } 
         animacao = 2
-        x-=2;   
+        x-=3;   
   } else{
-      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+2,y) ) { 
+      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+3,y) ) { 
         if (colisaoBloco(x,y)) {
           tentativas--;
           animacao = 3;
@@ -66,13 +67,13 @@ function jogar() {
           if (tentativas==0) {
              voltar = 1;
           } else {
-              alert("restam: "+tentativas+"tentativas");
+              
               x = 600;
               y = 470; 
             }
         } 
         animacao = 1
-        x+=2;   
+        x+=3;   
       } else{
             if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
                   if (colisaoBloco(x,y)) {
@@ -81,7 +82,7 @@ function jogar() {
                         if (tentativas==0) {
                               voltar = 1;
               } else {
-                alert("restam: "+tentativas+"tentativas");
+                
                   x = 600;
                   y = 470;
                 }
@@ -99,7 +100,7 @@ function jogar() {
                         
                         voltar = 1;
                       } else{
-                        alert("restam: "+tentativas+"tentativas");
+                        
                           x = 600;
                           y = 470;
                         }
@@ -110,11 +111,12 @@ function jogar() {
                     if (colisaoBloco(x,y)) {
                         tentativas--;
                         animacao = 3;
+
                         
                         if (tentativas==0) {
                           voltar = 1;
                         } else{ 
-                        alert("restam: "+tentativas+"tentativas");                          
+                                                
                             x = 600;
                             y = 470;
                           }    
@@ -155,7 +157,20 @@ function jogar() {
         b3=0
       }
     }
-  animaUse();
+
+  if(testeVida>tentativas){
+    animaUse();
+    conteteste++;
+    if(conteteste==8){
+      testeVida = tentativas;
+      conteteste = 0;
+      alert("perdeu");
+    }
+  }else{
+    animaUse();
+    animacao = 0;
+  }
+  
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
   rect(bloco2, 330,20, 30);
@@ -225,6 +240,8 @@ function jogar() {
     voltar = 0;
     voltarMenu();
   }
+
+
 
 }
 
