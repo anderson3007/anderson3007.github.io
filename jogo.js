@@ -38,7 +38,8 @@ var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
 var testeVida =3;
-var conteteste = 0;
+var conteteste = 3;
+var figura =50;
 
 
 function jogar() {
@@ -157,8 +158,15 @@ function jogar() {
         b3=0
       }
     }
+while(conteteste>tentativas){
+  background('#A1D391');
+  figura +=5;
+  rect(figura, 390,20, 30);
+  if (figura >=600) {
+    conteteste =tentativas;
+  }
+}
 
-  
   animaUse();
   animacao = 0;
   fill(0, 0, 204);
