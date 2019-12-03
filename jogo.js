@@ -36,7 +36,7 @@ var bloco1=50,
 var tentativas=3;
 var opcoes = [0,1];
 var tileSize=30;
-var voltar = false;
+var voltar = 0;
 
 
 function jogar() {
@@ -48,7 +48,7 @@ function jogar() {
               tentativas--;
               animacao = 3;
               if (tentativas==0) {
-                    voltar = true;
+                    voltar = 1;
               } else {
                       alert("restam: "+tentativas+"tentativas");
                       x = 600;
@@ -64,7 +64,7 @@ function jogar() {
           animacao = 3;
           
           if (tentativas==0) {
-             voltar = true;
+             voltar = 1;
           } else {
               alert("restam: "+tentativas+"tentativas");
               x = 600;
@@ -78,9 +78,8 @@ function jogar() {
                   if (colisaoBloco(x,y)) {
                         tentativas--;
                         animacao = 3;
-                      ;
                         if (tentativas==0) {
-                              voltar = true;
+                              voltar = 1;
               } else {
                   alert("restam: "+tentativas+"tentativas");
                   x = 600;
@@ -98,7 +97,7 @@ function jogar() {
                       
                       if (tentativas==0) {
                         
-                        voltar= true;
+                        voltar = 1;
                       } else{
 
                           alert("restam: "+tentativas+"tentativas");
@@ -115,7 +114,7 @@ function jogar() {
                         
                         if (tentativas==0) {
                           
-                          voltar = true;
+                          voltar = 1;
                         } else{
                             alert("restam: "+tentativas+"tentativas");
                             x = 600;
@@ -218,9 +217,9 @@ function jogar() {
   }
 }
 
-if(voltar== true){
+if(voltar== 1){
   alert("vc é muito lerdo. perdeu otário!");
-  voltar =false;
+  voltar = 0;
   voltarMenu();
 }
 
