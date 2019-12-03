@@ -161,7 +161,7 @@ function jogar() {
   if(testeVida>tentativas){
     animaUse();
     conteteste++;
-    if(conteteste==8){
+    if(conteteste==5000){
       testeVida = tentativas;
       conteteste = 0;
       alert("perdeu");
