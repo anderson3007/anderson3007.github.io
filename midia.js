@@ -21,7 +21,7 @@ function preload() {
 
 
 function animaUse() {
-  
+ 
   
   if (animacao == 1) {
       image(andarD[velocidade%8], x, y, 30,30); 
@@ -33,17 +33,13 @@ function animaUse() {
 
           if (animacao == 3) {
             for(var i=0;i<8; i++){
+                cenario();
                 fill('#E4E7E7');
                 stroke('white');
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
-                image(morrerD[m%9], 500, 200, 90,90);
-                if(t>10){
-                    i--;
-                    m++;
-                }else{
-                  t++
-                }
+                image(morrerD[i%9], 500, 200, 90,90);
+               
             }
               
           } else {
@@ -58,11 +54,6 @@ function animaUse() {
   } else {
       tempo++;
     }
-  animacao = 0;
+    m++;
+    animacao = 0;
 }
-
-function fase01() {
-
-}
-
-
