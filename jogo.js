@@ -42,7 +42,7 @@ function jogar() {
   
   cenario();
   
-  else if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
+   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
     
     if (colisaoBloco(x,y)) {
       
