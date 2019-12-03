@@ -75,7 +75,7 @@ function regras() {
   textSize(28);
   fill('black');
   
-  text('Aqui vao as regras', 40, 55);
+  text('regras', 40, 55);
 }
 
 
