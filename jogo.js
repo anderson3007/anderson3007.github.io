@@ -39,25 +39,13 @@ var tileSize=30;
 
 
 function jogar() {
-
-  background(200);
-  fill(250,250,250);
-
-  for (let i = 0; i < map.length; i++) {
-    for (let j = 0; j < map[i].length; j++) {
-      if (map[i][j] != 0) {
-        rect(j * tileSize, i * tileSize, tileSize, tileSize);
-      }
-    }
-  }
   
-
+  cenario();
   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
     if (colisaoBloco(x,y)) {
       tentativas--;
       animacao = 3;
       animaUse();
-      
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -69,7 +57,7 @@ function jogar() {
     } 
     animacao = 2
    
-    x-=3;   
+    x-=5;   
   }
    
 
@@ -88,7 +76,7 @@ function jogar() {
     } 
     animacao = 1
     
-    x+=3;   
+    x+=5;   
   }
 
 
@@ -134,15 +122,12 @@ function jogar() {
   if (colisaoBloco(x,y)) {
     tentativas--;
     animacao = 3;
-    
     animaUse();
-    
-    alert("restão: "+tentativas);
     if (tentativas==0) {
       alert("vc é muito lerdo. perdeu otário!")
       voltarMenu();
     } else{
-       
+        alert("restão: "+tentativas);
         x = 600;
         y = 470;
       }    
@@ -224,6 +209,20 @@ function jogar() {
       return true;
     return false;
  }
+
+ function cenario(){
+
+  background(200);
+  fill(250,250,250);
+  
+  for (let i = 0; i < map.length; i++) {
+      for (let j = 0; j < map[i].length; j++) {
+        if (map[i][j] != 0) {
+          rect(j * tileSize, i * tileSize, tileSize, tileSize);
+        }
+      }
+    }
+  }
 }
 
 
