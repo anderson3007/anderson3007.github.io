@@ -39,6 +39,7 @@ var tileSize=30;
 var voltar = 0;
 var testeVida =3;
 var conteteste = 0;
+var figura =50;
 
 
 function jogar() {
@@ -159,8 +160,13 @@ function jogar() {
     }
 
     while(testeVida>tentativas){
-      animaUse();
-      
+      figura+=5;
+      rect(figura, 390,20, 30);
+      if(figura >=600){
+        testeVida=tentativas;
+      }
+
+
     }
     animaUse();
     animacao = 0;
