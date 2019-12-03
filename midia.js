@@ -21,7 +21,7 @@ function preload() {
 
 
 function animaUse() {
-  animacao = 0;
+  
   
   if (animacao == 1) {
       image(andarD[velocidade%8], x, y, 30,30); 
