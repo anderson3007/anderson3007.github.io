@@ -66,7 +66,6 @@ function jogar() {
           if (tentativas==0) {
              voltar = 1;
           } else {
-              alert("restam: "+tentativas+"tentativas");
               x = 600;
               y = 470; 
             }
@@ -81,7 +80,6 @@ function jogar() {
                         if (tentativas==0) {
                               voltar = 1;
               } else {
-                  alert("restam: "+tentativas+"tentativas");
                   x = 600;
                   y = 470;
                 }
@@ -99,8 +97,6 @@ function jogar() {
                         
                         voltar = 1;
                       } else{
-
-                          alert("restam: "+tentativas+"tentativas");
                           x = 600;
                           y = 470;
                         }
@@ -113,10 +109,8 @@ function jogar() {
                         animacao = 3;
                         
                         if (tentativas==0) {
-                          
                           voltar = 1;
-                        } else{
-                            alert("restam: "+tentativas+"tentativas");
+                        } else{                           
                             x = 600;
                             y = 470;
                           }    
@@ -157,7 +151,6 @@ function jogar() {
         b3=0
       }
     }
-
   animaUse();
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
@@ -216,10 +209,12 @@ function jogar() {
     }
   }
 
-  if(voltar== 1){
-    alert("vc é muito lerdo. perdeu otário!");
+  if(voltar== 1){ 
+    if(m>=100){
+       m = 0;
     voltar = 0;
     voltarMenu();
+  }
   }
 
 }
