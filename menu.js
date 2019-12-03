@@ -5,7 +5,7 @@ var x_menu = 445,
 	  telaAtiva = 0;
 
 function setup() {
-  createCanvas(1200, 600);
+  createCanvas(1200, 615);
 }
 
 
