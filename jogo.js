@@ -42,100 +42,102 @@ function jogar() {
   
   cenario();
   
-   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
+   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {    
+        if (colisaoBloco(x,y)) {
+              tentativas--;
+              animacao = 3;
+              animaUse();
+              if (tentativas==0) {
+                    voltarMenu();
+              } else {
+                      alert("restão: "+tentativas);
+                      x = 600;
+                      y = 470;
+                }
+        } 
+        animacao = 2
+        x-=5;   
+  } else{
+      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
+        if (colisaoBloco(x,y)) {
+          tentativas--;
+          animacao = 3;
+          animaUse();
+          if (tentativas==0) {
+             voltarMenu();
+          } else {
+              alert("restão: "+tentativas);
+              x = 600;
+              y = 470; 
+            }
+        } 
+        animacao = 1
     
-    if (colisaoBloco(x,y)) {
-      
-      tentativas--;
-      animacao = 3;
-      animaUse();
-      
-      if (tentativas==0) {
-        voltarMenu();
-      } else {
-          alert("restão: "+tentativas);
-          x = 600;
-          y = 470;
-        }
-        
-    } 
-    animacao = 2
-   
-    x-=5;   
-  }
-   
-
-  else if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
-    if (colisaoBloco(x,y)) {
-      tentativas--;
-      animacao = 3;
-      animaUse();
-      if (tentativas==0) {
-        voltarMenu();
-      } else {
-          alert("restão: "+tentativas);
-          x = 600;
-          y = 470; 
-        }
-    } 
-    animacao = 1
-    
-    x+=5;   
-  }
-
-
-  else if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
-    if (colisaoBloco(x,y)) {
-      tentativas--;
-      animacao = 3;
-      animaUse();
-      if (tentativas==0) {
-        voltarMenu();
-      } else {
-          alert("restão: "+tentativas);
-          x = 600;
-          y = 470;
-        }
-    } 
-    
-    y-=5;
-    
-  }
-
-
-  else if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
-    if (colisaoBloco(x,y)){
-      tentativas--;
-      animacao = 3;
-      animaUse();
-      if (tentativas==0) {
-        alert("vc é muito lerdo. perdeu otário!")
-        voltarMenu();
+        x+=5;   
       } else{
+            if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
+            if (colisaoBloco(x,y)) {
+              tentativas--;
+              animacao = 3;
+              animaUse();
+              if (tentativas==0) {
+                voltarMenu();
+              } else {
+                  alert("restão: "+tentativas);
+                  x = 600;
+                  y = 470;
+                }
+            } 
+            
+            y-=5;
+            
+          } else{
+                  if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
+                    if (colisaoBloco(x,y)){
+                      tentativas--;
+                      animacao = 3;
+                      animaUse();
+                      if (tentativas==0) {
+                        alert("vc é muito lerdo. perdeu otário!")
+                        voltarMenu();
+                      } else{
 
-          alert("restão: "+tentativas);
-          x = 600;
-          y = 470;
+                          alert("restão: "+tentativas);
+                          x = 600;
+                          y = 470;
+                        }
+                    } 
+                    
+                    y+=5;
+                  } else{
+                    if (colisaoBloco(x,y)) {
+                        tentativas--;
+                        animacao = 3;
+                        animaUse();
+                        if (tentativas==0) {
+                          alert("vc é muito lerdo. perdeu otário!")
+                          voltarMenu();
+                        } else{
+                            alert("restão: "+tentativas);
+                            x = 600;
+                            y = 470;
+                          }    
+                    }
+                  }
+          }
         }
-    } 
-    
-    y+=5;
-  }
+   
+    }
   
 
-  else if (colisaoBloco(x,y)) {
-    tentativas--;
-    animacao = 3;
-    animaUse();
-    if (tentativas==0) {
-      alert("vc é muito lerdo. perdeu otário!")
-      voltarMenu();
-    } else{
-        alert("restão: "+tentativas);
-        x = 600;
-        y = 470;
-      }    
-  }
+
+  
+
+
+  
+  
+
+  
 
 
   if (bloco1<1150 && b1==0) {
