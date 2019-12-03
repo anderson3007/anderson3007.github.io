@@ -52,8 +52,7 @@ function animaUse() {
     tempo=0;
   } else {
       tempo++;
-    }
-    m++;
+  }
 }
 
 function fase01() {
