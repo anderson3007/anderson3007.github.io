@@ -226,10 +226,10 @@ function jogar() {
     fill('#ffc000');
     stroke('white');
     strokeWeight(1);
-    rect(1000, 550, 200, 40, 10);
+    rect(980, 550, 200, 40, 10);
     textSize(25);
     fill('white');
-    text('tentativas:'+tentativas, 1000, 565);
+    text('tentativas:'+tentativas, 1000, 570);
   }
 
   if(voltar== 1){ 
