@@ -36,6 +36,7 @@ var bloco1=50,
 var tentativas=3;
 var opcoes = [0,1];
 var tileSize=30;
+var voltar = false;
 
 
 function jogar() {
@@ -46,11 +47,10 @@ function jogar() {
         if (colisaoBloco(x,y)) {
               tentativas--;
               animacao = 3;
-              animaUse();
               if (tentativas==0) {
-                    voltarMenu();
+                    voltar = true;
               } else {
-                      alert("restão: "+tentativas);
+                      alert("restam: "+tentativas+"tentativas");
                       x = 600;
                       y = 470;
                 }
@@ -62,28 +62,27 @@ function jogar() {
         if (colisaoBloco(x,y)) {
           tentativas--;
           animacao = 3;
-          animaUse();
+          
           if (tentativas==0) {
-             voltarMenu();
+             voltar = true;
           } else {
-              alert("restão: "+tentativas);
+              alert("restam: "+tentativas+"tentativas");
               x = 600;
               y = 470; 
             }
         } 
         animacao = 1
-    
         x+=5;   
       } else{
             if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
-            if (colisaoBloco(x,y)) {
-              tentativas--;
-              animacao = 3;
-              animaUse();
-              if (tentativas==0) {
-                voltarMenu();
+                  if (colisaoBloco(x,y)) {
+                        tentativas--;
+                        animacao = 3;
+                      ;
+                        if (tentativas==0) {
+                              voltar = true;
               } else {
-                  alert("restão: "+tentativas);
+                  alert("restam: "+tentativas+"tentativas");
                   x = 600;
                   y = 470;
                 }
@@ -96,13 +95,13 @@ function jogar() {
                     if (colisaoBloco(x,y)){
                       tentativas--;
                       animacao = 3;
-                      animaUse();
+                      
                       if (tentativas==0) {
-                        alert("vc é muito lerdo. perdeu otário!")
-                        voltarMenu();
+                        
+                        voltar= true;
                       } else{
 
-                          alert("restão: "+tentativas);
+                          alert("restam: "+tentativas+"tentativas");
                           x = 600;
                           y = 470;
                         }
@@ -113,12 +112,12 @@ function jogar() {
                     if (colisaoBloco(x,y)) {
                         tentativas--;
                         animacao = 3;
-                        animaUse();
+                        
                         if (tentativas==0) {
-                          alert("vc é muito lerdo. perdeu otário!")
-                          voltarMenu();
+                          
+                          voltar =true;
                         } else{
-                            alert("restão: "+tentativas);
+                            alert("restam: "+tentativas+"tentativas");
                             x = 600;
                             y = 470;
                           }    
@@ -126,20 +125,8 @@ function jogar() {
                   }
           }
         }
-   
     }
   
-
-
-  
-
-
-  
-  
-
-  
-
-
   if (bloco1<1150 && b1==0) {
     bloco1 = bloco1+5;
   } else{
@@ -231,7 +218,11 @@ function jogar() {
   }
 }
 
-
+if(voltar){
+  alert("vc é muito lerdo. perdeu otário!");
+  voltar =false;
+  voltarMenu();
+}
 
 
 
