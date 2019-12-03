@@ -41,11 +41,15 @@ var tileSize=30;
 function jogar() {
   
   cenario();
-  if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
+  
+  else if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {   
+    
     if (colisaoBloco(x,y)) {
+      
       tentativas--;
       animacao = 3;
       animaUse();
+      
       if (tentativas==0) {
         voltarMenu();
       } else {
@@ -61,7 +65,7 @@ function jogar() {
   }
    
 
-  if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
+  else if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
     if (colisaoBloco(x,y)) {
       tentativas--;
       animacao = 3;
@@ -80,7 +84,7 @@ function jogar() {
   }
 
 
-  if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
+  else if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
     if (colisaoBloco(x,y)) {
       tentativas--;
       animacao = 3;
@@ -99,7 +103,7 @@ function jogar() {
   }
 
 
-  if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
+  else if (keyIsDown(DOWN_ARROW) && !bateuNoMapa(x,y+5) ){
     if (colisaoBloco(x,y)){
       tentativas--;
       animacao = 3;
@@ -119,7 +123,7 @@ function jogar() {
   }
   
 
-  if (colisaoBloco(x,y)) {
+  else if (colisaoBloco(x,y)) {
     tentativas--;
     animacao = 3;
     animaUse();
