@@ -115,7 +115,7 @@ function jogar() {
                         
                         if (tentativas==0) {
                           
-                          voltar =true;
+                          voltar = true;
                         } else{
                             alert("restam: "+tentativas+"tentativas");
                             x = 600;
@@ -218,7 +218,7 @@ function jogar() {
   }
 }
 
-if(voltar){
+if(voltar== true){
   alert("vc é muito lerdo. perdeu otário!");
   voltar =false;
   voltarMenu();
