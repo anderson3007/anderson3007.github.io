@@ -186,11 +186,11 @@ function jogar() {
    }
 
  function colisaoBloco(a,b) {
-    if ((bloco1+20==a || bloco1-20==a) && 390==b )
+    if ((bloco1+20==a || bloco1-20==a) && (b>385 && b<395) )
       return true;
-    if ((bloco2+20==a || bloco2-20==a) && 330==b )
+    if ((bloco2+20==a || bloco2-20==a) && (b>325 && b<335) )
       return true;
-    if ((bloco3+20==a || bloco3-20==a)&& 270==b )
+    if ((bloco3+20==a || bloco3-20==a) && (b>265 && b<275) )
       return true;
     return false;
  }
@@ -208,10 +208,10 @@ function jogar() {
       }
     }
   }
+
   if(voltar== 1){ 
     voltar = 0;
     voltarMenu();
-  
   }
 
 }
