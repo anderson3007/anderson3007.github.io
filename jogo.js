@@ -211,7 +211,7 @@ function jogar() {
   animacao = 0;
   if(voltar== 1){ 
     if(m>=100){
-       m = 0;
+     
     voltar = 0;
     voltarMenu();
   }
