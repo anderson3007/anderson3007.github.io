@@ -215,9 +215,9 @@ function jogar() {
     stroke('white');
     strokeWeight(1);
     rect(1000, 550, 100, 40, 10);
-    textSize(32);
+    textSize(10);
     fill('white');
-    text('tentativas:'+tentativas, 1000, 550);
+    text('tentativas:'+tentativas, 1000, 555);
   }
 
   if(voltar== 1){ 
