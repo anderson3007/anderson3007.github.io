@@ -32,6 +32,8 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
+            
+                cenario();
                 fill('#E4E7E7');
                 stroke('white');
                 strokeWeight(1);
@@ -44,17 +46,18 @@ function animaUse() {
             }
         }  
     }
-
+  animacao =0;
   if (tempo>3) {
     velocidade++;
     tempo=0;
   } else {
       tempo++;
-  }
+    }
+    if (velocidade >=8) {
+      velocidade=0;
+    }
+ 
 }
 
-function fase01() {
-
-}
 
 
