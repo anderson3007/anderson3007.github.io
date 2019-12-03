@@ -24,11 +24,11 @@ function animaUse() {
  
   
   if (animacao == 1) {
-      image(andarD[velocidade%8], x, y, 30,30); 
+      image(andarD[velocidade], x, y, 30,30); 
   } else {
       
       if (animacao == 2) {
-          image(andarE[velocidade%8], x, y, 30,30);
+          image(andarE[velocidade], x, y, 30,30);
       } else {
 
           if (animacao == 3) {
@@ -36,15 +36,15 @@ function animaUse() {
                 stroke('white');
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
-                image(morrerD[velocidade%9], 500, 200, 90,90);
+                image(morrerD[velocidade], 500, 200, 90,90);
                 alert("velocidade  "+velocidade+"   tempo:  "+tempo)
 
           } else {
-              image(pararD[velocidade%9], x, y, 30,30);    
+              image(pararD[velocidade], x, y, 30,30);    
             }
         }  
     }
-  animacao =0;
+  animacao = 0;
   if (tempo>3) {
     velocidade++;
     tempo=0;
