@@ -159,15 +159,17 @@ function jogar() {
       }
     }
 
-    while(testeVida>tentativas){
-      figura+=5;
-      rect(figura, 390,20, 30);
+    /*while(testeVida>tentativas){
+      background('#A1D391');
+      figura +=5;
+      rect(figura,390,20, 30);
       if(figura >=600){
-        testeVida=tentativas;
+        testeVida = tentativas;
+        figura = 0;
       }
 
 
-    }
+    }*/
     animaUse();
     animacao = 0;
   
