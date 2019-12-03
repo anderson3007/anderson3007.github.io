@@ -64,7 +64,7 @@ function animaUse() {
 function fase1() {
 
       rect(10, 555, 900, 65, 10);
-      textSize(30);
+      textSize(20);
       fill('black');
       text('Qual das imagens a seguir representa uma descoberta importante\n no período Paleolítico (pré-história).....', 10, 555);
 
