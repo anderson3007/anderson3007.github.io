@@ -43,7 +43,7 @@ function jogar() {
   
   cenario();
   
-   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-5,y)) {    
+   if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-3,y)) {    
         if (colisaoBloco(x,y)) {
               tentativas--;
               animacao = 3;
@@ -56,9 +56,9 @@ function jogar() {
                 }
         } 
         animacao = 2
-        x-=5;   
+        x-=3;   
   } else{
-      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+5,y) ) { 
+      if (keyIsDown(RIGHT_ARROW) && !bateuNoMapa(x+3,y) ) { 
         if (colisaoBloco(x,y)) {
           tentativas--;
           animacao = 3;
@@ -72,7 +72,7 @@ function jogar() {
             }
         } 
         animacao = 1
-        x+=5;   
+        x+=3;   
       } else{
             if (keyIsDown(UP_ARROW) && !bateuNoMapa(x,y-5) ) {
                   if (colisaoBloco(x,y)) {
@@ -214,6 +214,7 @@ function jogar() {
   }
 
   if(voltar== 1){ 
+    alert("vc é muito lerdo. perdeu otário!");
     voltar = 0;
     voltarMenu();
   }
