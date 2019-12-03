@@ -159,11 +159,11 @@ function jogar() {
       }
     }
 while(conteteste>tentativas){
-  background('#A1D391');
   figura +=5;
   rect(figura, 390,20, 30);
   if (figura >=600) {
     conteteste =tentativas;
+    alert("saiu");
   }
 }
 
