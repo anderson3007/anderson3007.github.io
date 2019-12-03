@@ -158,18 +158,13 @@ function jogar() {
       }
     }
 
-  if(testeVida>tentativas){
-    animaUse();
-    conteteste++;
-    if(conteteste==5000){
-      testeVida = tentativas;
-      conteteste = 0;
-      alert("perdeu");
+    while(testeVida>tentativas){
+      animaUse();
+      
     }
-  }else{
     animaUse();
     animacao = 0;
-  }
+  
   
   fill(0, 0, 204);
   rect(bloco1, 390,20, 30);
