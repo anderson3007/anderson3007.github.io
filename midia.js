@@ -32,15 +32,15 @@ function animaUse() {
       } else {
 
           if (animacao == 3) {
-            for(var i=0;i<8; i++){
+            
                 cenario();
                 fill('#E4E7E7');
                 stroke('white');
                 strokeWeight(1);
                 rect(350, 100, 500, 300, 10); 
-                image(morrerD[i%9], 500, 200, 90,90);
+                image(morrerD[velocidade%9], 500, 200, 90,90);
                
-            }
+            
               
           } else {
               image(pararD[velocidade%9], x, y, 30,30);    
@@ -55,5 +55,4 @@ function animaUse() {
       tempo++;
     }
     m++;
-    animacao = 0;
 }
