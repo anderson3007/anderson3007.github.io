@@ -231,7 +231,7 @@ function cenario(){
       fill('#ffc000');
     }
     if(tentativas==1){
-      fill('F13409');
+      fill('#F13409');
     }
     stroke('white');
     strokeWeight(1);
