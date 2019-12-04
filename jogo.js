@@ -154,7 +154,7 @@ function jogar() {
   if(testevidas>tentativas){
     x = 600;
     y = 470;
-    alert("perdeu");
+    alert("Não foi dessa vez... Tente novamente!");
     testevidas = tentativas;
   }
 
