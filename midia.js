@@ -87,39 +87,70 @@ function fase1() {
 
       image(fogo, 90, 30, 330,150);
       image(pc, 450, 30, 300,150);
-      image(maquina, 780, 30, 310,160);
+      image(maquina, 780, 30, 310,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
       fill('black');
       text('Qual das imagens a seguir representa uma descoberta importante no período Paleolítico\n (pré-história).....', 15, 570);
 
+      if(x>235 && x<275  && y<165){
+            alert("parabéns! você completou o desafio! vamos para a próxima fase");
+            fase = 2;
+          }
+          if(x>555 && x<605 && y<165){
+            tentativas--;
+          }
+          if(x>895 && x<935 && y<165){
+            tentativas--;
+          }
 }
 
 function fase2() {
       image(ama, 90, 30, 330,150);
       image(nilo, 450, 30, 300,150);
-      image(praia, 780, 30, 310,160);
+      image(praia, 780, 30, 310,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
       fill('black');
       text('Quais das imagens a seguir representa o rio Nilo?', 15, 570);
 
+      if(x>235 && x<275  && y<165){
+        tentativas--;
+      }
+      if(x>555 && x<605 && y<165){
+        alert("parabéns! você completou o desafio! vamos para a próxima fase");
+        fase = 3;
+        
+      }
+      if(x>895 && x<935 && y<165){
+        tentativas--;
+      }
   
 }
 
 function fase3() {
       image(img01, 90, 30, 330,150);
       image(img03, 450, 30, 300,150);
-      image(img02, 780, 30, 310,160);
+      image(img02, 780, 30, 310,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
       fill('black');
       text('Quais das imagens a seguir representa os túmulos  construídos em pedra para abrigar os \ncorpos dos faraós?', 15, 570);
 
-  
+      if(x>235 && x<275  && y<165){
+            tentativas--;
+          }
+          if(x>555 && x<605 && y<165){
+            alert("parabéns! você completou o desafio! vamos para a próxima fase");
+            fase = 4;
+            
+          }
+          if(x>895 && x<935 && y<165){
+            tentativas--;
+          }
 }
 function fase4() {
       
