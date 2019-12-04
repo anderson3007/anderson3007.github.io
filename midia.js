@@ -34,7 +34,6 @@ function animaUse() {
 
   else if (animacao == 3) {
         image(morrerD[velocidade], 500, 200, 90,90);
-        alert("velocidade  "+velocidade+"   tempo:  "+tempo);
   } 
 
   else if (animacao == 0){
@@ -56,8 +55,6 @@ function animaUse() {
         velocidade=0;
   }
  
-
-  
 }
 
 
@@ -69,6 +66,3 @@ function fase1() {
       text('Qual das imagens a seguir representa uma descoberta importante no período Paleolítico\n (pré-história).....', 15, 570);
 
 }
-
-
-
