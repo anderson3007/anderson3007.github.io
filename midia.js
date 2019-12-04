@@ -66,9 +66,9 @@ function animaUse() {
 
 function fase1() {
 
-      image(fogo, 87, 30, 330,120);
-      image(pc, 447, 30, 330,120);
-      image(maquina, 777, 30, 330,120);
+      image(fogo, 90, 30, 330,140);
+      image(pc, 447, 30, 300,140);
+      image(maquina, 777, 30, 300,140);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
