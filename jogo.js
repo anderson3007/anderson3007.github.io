@@ -160,14 +160,66 @@ function jogar() {
     }
 
 
+  if(fase == 1){
+        
+        fase1();
+        
+        if(y<160 && (x>240 && x<260)){
+              alert("parabéns! você venceu o desafio. vamos para a próxima fase");
+              fase = 2;
+        }
+
+        if(y<160 && (x>580 && x<590)){
+          tentativas--;
+        }
+
+        if(y<160 && (x>900 && x<930)){
+          tentativas--;
+        }
+  }
+
+  if(fase == 2){
+        
+        fase2();
+        
+        if(y<160 && (x>240 && x<260)){
+              tentativas--;
+        }
+
+        if(y<160 && (x>580 && x<590)){
+              alert("parabéns! você venceu o desafio. vamos para a próxima fase");
+              fase = 3;
+          
+        }
+
+        if(y<160 && (x>900 && x<930)){
+          tentativas --;
+        }
+  } 
+
+  if(fase == 3){
+        
+        fase3();
+        
+        if(y<160 && (x>240 && x<260)){
+              tentativas --;
+        }
+
+         if(y<160 && (x>580 && x<590)){
+              alert("parabéns! você venceu o desafio. vamos para a próxima fase");
+              fase = 3;
+        }
+
+         if(y<160 && (x>580 && x<590)){
+          tentativas --;
+        }
+  } 
+
   if(testevidas>tentativas){
-    alert("perdeu");
+    alert("você perdeu! tente novamente!");
     testevidas = tentativas;
   }
 
-  if(fase == 1){
-    fase1();
-  }  
   animaUse();
   animacao = 0;
   fill(0, 0, 204);
