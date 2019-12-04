@@ -73,10 +73,10 @@ function regras() {
   rect(250, 100, 700, 400, 10);
   textSize(40);
   fill('white');
-  text('REGRAS:', 550, 150);
+  text('REGRAS:', 540, 150);
   textSize(30);
   fill('white');
-  text('1:  Direcione o boneco até a resposta correta;\n2:  Evite bater nos blocos, ao bater neles suas chances\n irão diminuir;',300, 300);
+  text('1:  Direcione o boneco até a resposta correta;\n2:  Evite bater nos blocos, ao bater neles suas\n chances irão diminuir;',300, 300);
   
 
 }
