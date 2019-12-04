@@ -35,7 +35,8 @@ var testevidas =3;
 var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
-var fase = 1;
+var fase = 1,
+    animacao = 0;
 
 
 function jogar() {
