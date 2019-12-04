@@ -87,7 +87,7 @@ function fase1() {
 
       image(fogo, 90, 30, 330,150);
       image(pc, 450, 30, 300,150);
-      image(maquina, 780, 30, 310,130);
+      image(maquina, 780, 30, 320,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
@@ -97,6 +97,8 @@ function fase1() {
       if(x>235 && x<275  && y<165){
             alert("parabéns! você completou o desafio! vamos para a próxima fase");
             fase = 2;
+            x = 600;
+            y = 470;
           }
           if(x>555 && x<605 && y<165){
             tentativas--;
@@ -110,7 +112,7 @@ function fase1() {
 function fase2() {
       image(ama, 90, 30, 330,150);
       image(nilo, 450, 30, 300,150);
-      image(praia, 780, 30, 310,130);
+      image(praia, 780, 30, 320,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
@@ -123,6 +125,8 @@ function fase2() {
       if(x>555 && x<605 && y<165){
         alert("parabéns! você completou o desafio! vamos para a próxima fase");
         fase = 3;
+        x = 600;
+        y = 470;
         
       }
       if(x>895 && x<935 && y<165){
@@ -134,7 +138,7 @@ function fase2() {
 function fase3() {
       image(img01, 90, 30, 330,150);
       image(img03, 450, 30, 300,150);
-      image(img02, 780, 30, 310,130);
+      image(img02, 780, 30, 320,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
@@ -147,6 +151,8 @@ function fase3() {
           if(x>555 && x<605 && y<165){
             alert("parabéns! você completou o desafio! vamos para a próxima fase");
             fase = 4;
+            x = 600;
+            y = 470;
             
           }
           if(x>895 && x<935 && y<165){
