@@ -87,7 +87,7 @@ function fase1() {
 
       image(fogo, 90, 30, 330,150);
       image(pc, 450, 30, 300,150);
-      image(maquina, 780, 30, 320,150);
+      image(maquina, 780, 30, 330,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
@@ -112,7 +112,7 @@ function fase1() {
 function fase2() {
       image(ama, 90, 30, 330,150);
       image(nilo, 450, 30, 300,150);
-      image(praia, 780, 30, 320,150);
+      image(praia, 780, 30, 330,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
@@ -138,7 +138,7 @@ function fase2() {
 function fase3() {
       image(img01, 90, 30, 330,150);
       image(img03, 450, 30, 300,150);
-      image(img02, 780, 30, 320,150);
+      image(img02, 780, 30, 330,150);
 
       rect(10, 545, 900, 70, 10);
       textSize(20);
