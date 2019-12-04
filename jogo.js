@@ -4,7 +4,7 @@ let map = [
   [1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
   [1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
   [1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
-  [1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
+  [1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1],
   [1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1],
   [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
   [1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1],
@@ -43,7 +43,7 @@ var fase = 1;
 
 
 function jogar() {
-
+  
   cenario();
   
    if (keyIsDown(LEFT_ARROW) && !bateuNoMapa(x-3,y)) {    
@@ -159,7 +159,35 @@ function jogar() {
       }
     }
 
-  
+
+  if(testevidas>tentativas){
+    alert("perdeu");
+    testevidas = tentativas;
+  }
+
+  if(fase == 1){
+    fase1();
+  }  
+  animaUse();
+  animacao = 0;
+  fill(0, 0, 204);
+  rect(bloco1, 390,20, 30);
+  rect(bloco2, 330,20, 30);
+  rect(bloco3, 270,20, 30);
+
+ 
+  function bateuNoMapa(a, b) {
+    let bateu=false; 
+      for (var i = 0; i < map.length; i++) {
+        for (var j = 0; j < map[i].length; j++) {
+          if (map[i][j]==1 && colisaoMapa(a,b,j * tileSize,i * tileSize)){
+            bateu=true;
+            
+          }
+        }
+      }
+      return bateu;
+  }
      
 
   function colisaoMapa(x1,y1,x2,y2) {
@@ -175,7 +203,7 @@ function jogar() {
     
    }
 
-   function colisaoBloco(a,b) {
+ function colisaoBloco(a,b) {
     if ( ( (bloco1+20>=a && bloco1-20<a) || (bloco1-20<=a && bloco1+20>a) ) && (b>385 && b<395) )
       return true;
     if ( ( (bloco2+20>=a && bloco2-20<a) || (bloco2-20<=a && bloco2+20>a) ) && (b>325 && b<335) )
@@ -184,57 +212,26 @@ function jogar() {
       return true;
     return false;
  }
- if(fase == 1){
-    fase1();
-    if(y<160 && (x>240 && x<260)){
-      alert("parabéns! você venceu o desafio. vamos para a próxima fase");
-      fase = 2;
-    }
-  }
-  
-  if(testevidas>tentativas){
-    alert("voce perdeu! tente novamente");
-    testevidas = tentativas;
-  }
-  animaUse();
-  animacao = 0;
-  fill(0, 0, 204);
-  rect(bloco1, 390,20, 30);
-  rect(bloco2, 330,20, 30);
-  rect(bloco3, 270,20, 30);
-
-}
-
 
  function cenario(){
 
-        background(200);
-        fill(250,250,250);
+  background(200);
+  fill(250,250,250);
   
-        for (let i = 0; i < map.length; i++) {
-        for (let j = 0; j < map[i].length; j++) {
-          if (map[i][j] != 0) {
+  for (let i = 0; i < map.length; i++) {
+      for (let j = 0; j < map[i].length; j++) {
+        if (map[i][j] != 0) {
           rect(j * tileSize, i * tileSize, tileSize, tileSize);
         }
       }
     }
-    if(tentativas == 3){
-       fill('#A1D391');
-    }
-
-    if(tentativas == 2){
-      fill('#ffc000');
-    }
-    
-    if(tentativas == 1){
-      fill('#f72419');
-    }
+    fill('#ffc000');
     stroke('white');
     strokeWeight(1);
     rect(980, 550, 200, 40, 10);
     textSize(25);
     fill('white');
-    text('tentativas: '+tentativas, 1000, 575);
+    text('tentativas:'+tentativas, 1000, 570);
   }
 
   if(voltar== 1){ 
@@ -243,18 +240,9 @@ function jogar() {
     voltarMenu();
   }
 
-function bateuNoMapa(a, b) {
-    let bateu=false; 
-      for (var i = 0; i < map.length; i++) {
-        for (var j = 0; j < map[i].length; j++) {
-          if (map[i][j]==1 && colisaoMapa(a,b,j * tileSize,i * tileSize)){
-            bateu=true;
-            
-          }
-        }
-      }
-      return bateu;
-  }
+
+
+}
 
 
 
