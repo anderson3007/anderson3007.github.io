@@ -2,7 +2,9 @@ var
   andarD = [ ],
   andarE = [ ],
   morrerD =[ ],
-  pararD = [ ];
+  pararD = [ ],
+  velocidade = 0,
+  tempo = 0;
 
 var 
   livro,
