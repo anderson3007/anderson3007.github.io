@@ -20,7 +20,7 @@ let map = [
   
 ];
 
-let boneco,
+let 
     x = 600,
     y = 470;
 
@@ -35,8 +35,8 @@ var testevidas =3;
 var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
-var fase = 1,
-    animacao = 0;
+var fase = 1;
+var animacao = 0;
 
 
 function jogar() {
@@ -157,23 +157,18 @@ function jogar() {
     }
 
     if(fase == 1){
-            fase1();
-            if(x>235 && x<275  && y<165){
-              alert("parabéns! você completou o desafio! vamos para a próxima fase");
-              fase = 2;
-            }
-            if(x>555 && x<605 && y<165){
-              tentativas--;
-            }
-            if(x>895 && x<935 && y<165){
-              tentativas--;
-            }
+          fase1();
+          
     }
 
     if(fase==2){
-      fase2();
+          fase2();
     }
 
+     if(fase==3){
+          fase3();
+          
+    }
 
   if(testevidas>tentativas){
     alert("perdeu");
@@ -187,10 +182,12 @@ function jogar() {
   rect(bloco2, 330,20, 30);
   rect(bloco3, 270,20, 30);
 
-  if(voltar== 1){ 
-    alert("vc é muito lerdo. perdeu otário!");
-    voltar = 0;
-    voltarMenu();
+  if (voltar == 1) { 
+        
+        alert("GAME OVER!");
+        voltar = 0;
+        fase = 1;
+        voltarMenu();
   }
 
 }
