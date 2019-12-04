@@ -238,7 +238,7 @@ function cenario(){
     rect(980, 550, 200, 40, 10);
     textSize(25);
     fill('white');
-    text('tentativas:'+tentativas, 1000, 570);
+    text('tentativas:'+tentativas, 1000, 580);
   }
 
 
