@@ -56,7 +56,7 @@ function menu() {
 
 
 function voltarMenu() {
-  
+  fase = 1;
   tentativas=3;
   x=600;
   y=470;
