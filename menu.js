@@ -31,7 +31,7 @@ function draw() {
 function menu() {
   //código rgb
   background('#A1D391');
-  //image(livro, 310, 300, 600, 200);
+  image(livro, 310, 300, 600, 200);
   
    
   fill('#ffc000');
