@@ -49,10 +49,7 @@ function jogar() {
               animacao = 3;
               if (tentativas==0) {
                     voltar = 1;
-              } else {
-                      x = 600;
-                      y = 470;
-                }
+              } 
         } 
         animacao = 2
         x-=3;   
@@ -64,11 +61,7 @@ function jogar() {
           
           if (tentativas==0) {
              voltar = 1;
-          } else {
-              
-              x = 600;
-              y = 470; 
-            }
+          } 
         } 
         animacao = 1
         x+=3;   
@@ -79,11 +72,7 @@ function jogar() {
                         animacao = 3;
                         if (tentativas==0) {
                               voltar = 1;
-              } else {
-                
-                  x = 600;
-                  y = 470;
-                }
+              } 
             } 
             
             y-=5;
@@ -97,11 +86,7 @@ function jogar() {
                       if (tentativas==0) {
                         
                         voltar = 1;
-                      } else{
-                        
-                          x = 600;
-                          y = 470;
-                        }
+                      } 
                     } 
                     
                     y+=5;
@@ -113,11 +98,7 @@ function jogar() {
                         
                         if (tentativas==0) {
                           voltar = 1;
-                        } else{ 
-                                                
-                            x = 600;
-                            y = 470;
-                          }    
+                        }    
                     }
                   }
           }
@@ -171,6 +152,8 @@ function jogar() {
     }
 
   if(testevidas>tentativas){
+    x = 600;
+    y = 470;
     alert("perdeu");
     testevidas = tentativas;
   }
