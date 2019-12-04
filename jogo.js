@@ -225,13 +225,23 @@ function jogar() {
         }
       }
     }
-    fill('#ffc000');
+    if(tentativas == 3){
+       fill('#A1D391');
+    }
+
+    if(tentativas == 2){
+      fill('#ffc000');
+    }
+    
+    if(tentativas == 1){
+      fill('#f72419');
+    }
     stroke('white');
     strokeWeight(1);
     rect(980, 550, 200, 40, 10);
     textSize(25);
     fill('white');
-    text('tentativas:'+tentativas, 1000, 570);
+    text('tentativas: '+tentativas, 1000, 575);
   }
 
   if(voltar== 1){ 
