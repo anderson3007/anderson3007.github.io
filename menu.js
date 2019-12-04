@@ -67,13 +67,13 @@ function voltarMenu() {
 function regras() {
    
   background('#A1D391');
-  fill('#f72419'); 
+  fill('#FFC000'); 
   stroke('white');
   strokeWeight(1);
-  rect(600, 100, 700, 400, 10);
+  rect(400, 100, 700, 400, 10);
   textSize(40);
   fill('white');
-  text('REGRAS:', 600, 100);
+  text('REGRAS:', 550, 100);
   textSize(25);
   fill('white');
   text('1:  Direcione o boneco até a resposta correta;\n2:  Evite bater nos blocos, ao bater neles suas chances irão diminuir;', 500, 300);
