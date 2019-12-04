@@ -20,11 +20,8 @@ let map = [
   
 ];
 
-let boneco;
-// cordenada do cursor menu
-
-//posição inicial do boneco
-    x = 600;
+let boneco,
+    x = 600,
     y = 470;
 
 var bloco1=50,
@@ -39,7 +36,6 @@ var opcoes = [0,1];
 var tileSize=30;
 var voltar = 0;
 var fase = 1;
-
 
 
 function jogar() {
@@ -213,7 +209,15 @@ function jogar() {
     return false;
  }
 
- function cenario(){
+  if(voltar== 1){ 
+    alert("vc é muito lerdo. perdeu otário!");
+    voltar = 0;
+    voltarMenu();
+  }
+
+}
+
+function cenario(){
 
   background(200);
   fill(250,250,250);
@@ -233,16 +237,6 @@ function jogar() {
     fill('white');
     text('tentativas:'+tentativas, 1000, 570);
   }
-
-  if(voltar== 1){ 
-    alert("vc é muito lerdo. perdeu otário!");
-    voltar = 0;
-    voltarMenu();
-  }
-
-
-
-}
 
 
 
