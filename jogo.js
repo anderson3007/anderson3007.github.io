@@ -156,15 +156,30 @@ function jogar() {
       }
     }
 
+    if(fase == 1){
+            fase1();
+            if(x>235 && x<275  && y<165){
+              alert("parabéns! você completou o desafio! vamos para a próxima fase");
+              fase = 2;
+            }
+            if(x>555 && x<605 && y<165){
+              tentativas--;
+            }
+            if(x>895 && x<935 && y<165){
+              tentativas--;
+            }
+    }
+
+    if(fase==2){
+      fase2();
+    }
+
 
   if(testevidas>tentativas){
     alert("perdeu");
     testevidas = tentativas;
   }
 
-  if(fase == 1){
-    fase1();
-  }  
   animaUse();
   animacao = 0;
   fill(0, 0, 204);
