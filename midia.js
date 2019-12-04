@@ -4,13 +4,19 @@ var
   morrerD =[ ],
   pararD = [ ],
   livro,
+  fogo,
+  pc,
+  maquina,
   tempo = 0,
   velocidade=0,
   animacao = 0;
 
 function preload() {
   
-      livro = loadImage('img/livro.png');
+      livro   = loadImage('img/livro.png');
+      fogo    = loadImage('img/perguntas/fase1/fogo.jpg');
+      pc      = loadImage('img/perguntas/fase1/pc.jpg');
+      maquina = loadImage('img/perguntas/fase1/maquina.jpg');
       
       for (var i=0;i<=8;i++){
             andarD [i] = loadImage('img/run_direito/Run__00'+i+'.png');
@@ -60,9 +66,16 @@ function animaUse() {
 
 function fase1() {
 
+      image(fogo, 87, 30, 330,120);
+      image(pc, 447, 30, 330,120);
+      image(maquina, 777, 30, 330,120);
+
       rect(10, 545, 900, 70, 10);
       textSize(20);
       fill('black');
       text('Qual das imagens a seguir representa uma descoberta importante no período Paleolítico\n (pré-história).....', 15, 570);
 
 }
+
+
+
