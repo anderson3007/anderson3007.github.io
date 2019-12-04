@@ -158,8 +158,10 @@ function jogar() {
         b3=0
       }
     }
+
+
   if(testevidas>tentativas){
-    alert(perdeu);
+    alert("perdeu");
     testevidas = tentativas;
   }
 
