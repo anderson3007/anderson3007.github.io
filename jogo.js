@@ -167,6 +167,7 @@ function jogar() {
         if(y<160 && (x>240 && x<260)){
               alert("parabéns! você venceu o desafio. vamos para a próxima fase");
               fase = 2;
+              break;
         }
 
         if(y<160 && (x>580 && x<590)){
@@ -189,6 +190,7 @@ function jogar() {
         if(y<160 && (x>580 && x<590)){
               alert("parabéns! você venceu o desafio. vamos para a próxima fase");
               fase = 3;
+              break;
           
         }
 
