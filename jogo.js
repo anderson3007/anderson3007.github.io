@@ -171,8 +171,15 @@ function jogar() {
   rect(bloco2, 330,20, 30);
   rect(bloco3, 270,20, 30);
 
- 
-  function bateuNoMapa(a, b) {
+  if(voltar== 1){ 
+    alert("vc é muito lerdo. perdeu otário!");
+    voltar = 0;
+    voltarMenu();
+  }
+
+}
+
+function bateuNoMapa(a, b) {
     let bateu=false; 
       for (var i = 0; i < map.length; i++) {
         for (var j = 0; j < map[i].length; j++) {
@@ -184,9 +191,19 @@ function jogar() {
       }
       return bateu;
   }
-     
-
-  function colisaoMapa(x1,y1,x2,y2) {
+ function colisaoBloco(a,b) {
+    if ( ( (bloco1+20>=a && bloco1-20<a) || (bloco1-20<=a && bloco1+20>a) ) && (b>385 && b<395) ){
+      return true;
+    }
+    if ( ( (bloco2+20>=a && bloco2-20<a) || (bloco2-20<=a && bloco2+20>a) ) && (b>325 && b<335) ){
+      return true;
+    }
+    if (( (bloco3+20>=a && bloco3-20<a) || (bloco3-20<=a && bloco3+20>a) ) && (b>265 && b<275) ){
+      return true;
+    }
+    return false;
+ }
+function colisaoMapa(x1,y1,x2,y2){
     if(x1 > x2 + 25)
       return false;
     if(y1 > y2 + 25)
@@ -198,24 +215,6 @@ function jogar() {
     return true;
     
    }
-
- function colisaoBloco(a,b) {
-    if ( ( (bloco1+20>=a && bloco1-20<a) || (bloco1-20<=a && bloco1+20>a) ) && (b>385 && b<395) )
-      return true;
-    if ( ( (bloco2+20>=a && bloco2-20<a) || (bloco2-20<=a && bloco2+20>a) ) && (b>325 && b<335) )
-      return true;
-    if (( (bloco3+20>=a && bloco3-20<a) || (bloco3-20<=a && bloco3+20>a) ) && (b>265 && b<275) )
-      return true;
-    return false;
- }
-
-  if(voltar== 1){ 
-    alert("vc é muito lerdo. perdeu otário!");
-    voltar = 0;
-    voltarMenu();
-  }
-
-}
 
 function cenario(){
 
